@@ -1,0 +1,158 @@
+ion-content{
+  --ion-background-color:#fff;
+  --overflow: hidden;
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+
+  ion-grid {
+    color: black;
+
+    ion-row {
+     
+      ion-col {
+
+        .input-group {
+          display: flex;
+          flex-direction: row;
+          gap: 8px;
+          margin-top: 10px;
+          margin-top: 10px;
+          padding-left: 15px;
+          padding-bottom: 15px;
+          border-bottom: 1px solid #dbe1dc;
+
+          .input-text {
+            background-color: white;
+            border: 1px solid #dbe1dc;
+            border-radius: 10px;
+            padding: 5px 8px;
+            font-size: 13px;
+            width: 100px;
+          }
+
+          .label {
+            font-size: 14px;
+            font-weight: 550;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
+
+          .go {
+            border: none;
+            font-size: 14px;
+            font-weight: 550;
+            padding: 5px 8px;
+            background: #1D9C4F;
+            color: white;
+            border-radius: 10px;
+          }
+        }
+
+        .latest-text {
+          font-size: 14px;
+          font-weight: 400;
+          margin-top: auto;
+          margin-bottom: auto;
+          padding: 5px 8px;
+          padding: 12px 13px;
+        }
+    
+
+        .form-container {
+          border-bottom: 1px solid #dbe1dc;
+          padding-bottom: 15px;
+
+          .date-range-group {
+            margin-top: 10px;
+            padding-left: 15px;
+          
+            
+            .date-label {
+              font-size: 14px;
+              font-weight: 550;
+              margin-bottom: 5px;
+            }
+    
+            .input-text {
+              background-color: black;
+              border: 1px solid #dbe1dc;
+              border-radius: 10px;
+              padding: 5px 8px;
+              font-size: 14px;
+              width: 170px;
+              color: white;
+            }
+          }
+  
+          .submit {
+            border: none;
+            font-size: 14px;
+            font-weight: 550;
+            padding: 8px 10px;
+            background: #1D9C4F;
+            color: white;
+            border-radius: 10px;
+          }
+
+          .disabled {
+            background: gray;
+          }
+        }
+
+        .rate-list-container {
+          margin-top: 15px;
+
+          .rate-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            padding-bottom: 10px;
+
+            .col {
+              flex-basis: 50%;
+              text-align: center;
+              font-size: 14px;
+              font-weight: 550;
+              border: 1px solid #dbe1dc;
+              padding: 3px 0px;
+            }
+          }
+
+          .rate-body {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 10px;
+            overflow: hidden;
+            max-height: 52vh;
+            overflow-y: auto;
+            
+            .list {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              background: aliceblue;
+
+              text-align: center;
+              font-size: 14px;
+              font-weight: 400;
+              padding: 5px 0px;
+              border-bottom: 1px solid #dbe1dc;
+              .rec {
+                flex-basis: 50%; 
+
+              }
+            }
+          }
+
+        }
+      }
+    }
+      
+  }
+}

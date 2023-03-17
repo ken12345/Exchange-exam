@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" (click)="back()">Back</ion-button>
+    </ion-buttons>
+    <ion-title>{{code}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="input-group">
+          <div class="label">{{label.COMPARE_TO}}</div>
+          <input type="text" class="input-text" [readOnly]="true" (focus)='openList()' [(ngModel)]="compareCode">
+          <button class="go" (click)="go()">{{label.GO}}</button>
+        </div>
+        <div class="latest-text" *ngIf="rate !== 0 && compareCode!== ''">The latest rate of {{code}} to {{compareCode}} is: <span style="font-weight: 550;">{{rate}}</span></div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div class="form-container">
+          <div class="date-range-group">
+            <div>
+              <div class="date-label">{{label.START_DATE}}</div>
+              <input type="date" class="input-text" [(ngModel)]="startDate">
+            </div>
+           </div>
+           <div class="date-range-group">
+            <div>
+              <div class="date-label">{{label.END_DATE}}</div>
+              <input type="date" class="input-text" [(ngModel)]="endDate">
+            </div>
+            <div style="margin-top: 15px;">
+              <button class="submit" [disabled]=" endDate === '' || startDate === '' || compareCode === ''" (click)="submit()" [ngClass]="{'disabled': endDate === '' || startDate === '' || compareCode === ''}">submit</button>
+             </div>
+           </div>
+        </div>
+        <div class="rate-list-container" *ngIf="tableList.length > 0">
+          <div class="rate-header">
+            <div class="col">Date</div>
+            <div class="col">Rate</div>
+          </div>
+          <div class="rate-body">
+            <div *ngFor="let list of tableList" class="list">
+              <div class="rec">{{list.date}}</div>
+              <div class="rec">{{list.rate}}</div>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

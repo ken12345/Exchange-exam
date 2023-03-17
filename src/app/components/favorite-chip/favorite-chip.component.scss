@@ -1,0 +1,28 @@
+.chip {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background: gainsboro;
+  width: 100px;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 0px 10px;
+
+  .name {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-basis: 80%;
+  }
+
+  .remove {
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    color: black;
+    font-size: 16px;
+    padding-top: 6px;
+    flex-basis: 20%;
+  }
+}

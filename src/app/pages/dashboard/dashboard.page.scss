@@ -1,0 +1,103 @@
+ion-content{
+  --ion-background-color:#fff;
+  --overflow: hidden;
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+
+  ion-grid {
+    color: black;
+
+    ion-row {
+     
+      ion-col {
+
+        .favorite-group {
+          margin-top: 20px;
+          margin-left: 15px;
+
+          .label {
+            font-size: 14px;
+            font-weight: 550;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
+
+          .favorite-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding-top: 10px;
+            padding-left: 15px;
+          }
+
+        }
+
+        .input-group {
+          display: flex;
+          flex-direction: row;
+          gap: 8px;
+          margin-top: 10px;
+          margin-left: 15px;
+
+          .input-text {
+            background-color: white;
+            border: 1px solid #dbe1dc;
+            border-radius: 10px;
+            padding: 5px 8px;
+            font-size: 13px;
+          }
+
+          .label {
+            font-size: 14px;
+            font-weight: 550;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
+
+          .go {
+            border: none;
+            font-size: 14px;
+            font-weight: 550;
+            padding: 5px 8px;
+            background: #1D9C4F;
+            color: white;
+            border-radius: 10px;
+          }
+        }
+
+        .rate-list {
+          margin-left: 15px;
+          display: flex;
+          flex-direction: column;
+          margin-top: 10px;
+
+          .label {
+            font-size: 14px;
+            font-weight: 550;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
+
+          .rate-container {
+            max-height: 60vh;
+            display: block;
+            overflow: hidden;
+            background: aliceblue;
+            margin-top: 10px;
+            overflow-y: auto;
+            padding-right: 15px;
+          }
+        }
+        
+      }
+    }
+  }
+  
+}
+
+

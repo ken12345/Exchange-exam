@@ -1,0 +1,45 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="favorite-group">
+          <div class="label">{{label.FAVORITE_CURRENCIES}}</div>
+          <div class="favorite-container">
+            <div *ngFor="let list of favoriteList">
+              <favorite-chip [name]="list" (removeEvent)="removeHandler($event)"></favorite-chip>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="input-group">
+          <div class="label">{{label.SELECT_CURRENCY}}</div>
+          <input type="text" class="input-text" [readOnly]="true" (focus)='openList()' [(ngModel)]="baseCode">
+          <button class="go" (click)="go()">{{label.GO}}</button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="rateList.length > 0">
+      <ion-col>
+        <div class="rate-list">
+          <div class="label">{{label.RATES}}</div>
+          <div class="rate-container">
+            <div *ngFor="let rates of rateList">
+              <rate-list [currencyName]="rates?.curr" [rate]="rates.rate" (favoriteEvent)="favoriteEvent($event)"></rate-list>
+             </div>
+          </div>
+        
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

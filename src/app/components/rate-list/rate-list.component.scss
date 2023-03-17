@@ -1,0 +1,21 @@
+.rate-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px;
+  border-bottom: 1px solid gainsboro;
+
+  .btn-group {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    
+    .add {
+      margin-top: 3px;
+    }
+  }
+
+  
+}
